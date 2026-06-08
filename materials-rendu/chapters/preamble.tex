@@ -1,0 +1,87 @@
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, calc, arrows.meta, positioning}
+
+\definecolor{primarycolor}{RGB}{30, 58, 95}
+\definecolor{secondarycolor}{RGB}{0, 90, 130}
+\definecolor{accentcolor}{RGB}{180, 50, 50}
+\definecolor{goldcolor}{RGB}{180, 140, 80}
+\definecolor{ruleguray}{RGB}{200, 200, 200}
+\definecolor{boxbg}{RGB}{250, 247, 240}
+\definecolor{boxbar}{RGB}{180, 140, 80}
+\definecolor{rendubg}{RGB}{240, 246, 252}
+\definecolor{rendubar}{RGB}{30, 58, 95}
+\definecolor{ducbg}{RGB}{252, 245, 240}
+\definecolor{ducbar}{RGB}{180, 90, 50}
+\definecolor{successgreen}{RGB}{74, 140, 63}
+
+\titleformat{\section}[block]
+  {\normalfont\LARGE\bfseries\color{primarycolor}}
+  {\raisebox{0.1em}{\color{goldcolor}\rule{0.8em}{0.8em}}\hspace{0.6em}\thesection}
+  {0.5em}
+  {}
+  [{\vspace{0.2em}\color{ruleguray}\titlerule[0.6pt]}]
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{secondarycolor}}
+  {\thesubsection}{0.6em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{secondarycolor!85}}
+  {\thesubsubsection}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{2em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.5em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{primarycolor!75}\textit{打通材料基础任督二脉 · v0.1}}
+\fancyhead[R]{\small\color{primarycolor!75}\textit{Li Zhou · 2027}}
+\fancyfoot[C]{\color{primarycolor!60}\small$\diamond$\ \thepage\ $\diamond$}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{goldcolor!50}\leaders\hrule height \headrulewidth\hfill}}
+
+\setlength{\parskip}{0.4em}
+\setlength{\parindent}{0pt}
+\linespread{1.18}
+
+\setlist{itemsep=0.25em, topsep=0.3em}
+\setlist[itemize,1]{label=\textcolor{goldcolor}{$\bullet$}}
+
+\newtcolorbox{bluebox}{
+  enhanced, colback=boxbg, colframe=boxbg, boxrule=0pt,
+  borderline west={3pt}{0pt}{boxbar},
+  left=12pt, right=10pt, top=8pt, bottom=8pt,
+  breakable, before skip=0.6em, after skip=0.6em
+}
+
+\newtcolorbox{rendubox}[1][任脉]{
+  enhanced, colback=rendubg, colframe=rendubg, boxrule=0pt,
+  borderline west={3pt}{0pt}{rendubar},
+  left=12pt, right=10pt, top=8pt, bottom=8pt,
+  breakable, before skip=0.6em, after skip=0.6em,
+  title=\textbf{\textcolor{rendubar}{☯ #1}}, fonttitle=\bfseries,
+  attach title to upper={\\[0.3em]}
+}
+
+\newtcolorbox{ducbox}[1][督脉]{
+  enhanced, colback=ducbg, colframe=ducbg, boxrule=0pt,
+  borderline west={3pt}{0pt}{ducbar},
+  left=12pt, right=10pt, top=8pt, bottom=8pt,
+  breakable, before skip=0.6em, after skip=0.6em,
+  title=\textbf{\textcolor{ducbar}{☯ #1}}, fonttitle=\bfseries,
+  attach title to upper={\\[0.3em]}
+}
+
+\definecolor{staticcolor}{RGB}{60, 90, 140}
+\definecolor{dynamiccolor}{RGB}{180, 90, 50}
+\definecolor{mergecolor}{RGB}{120, 80, 140}
