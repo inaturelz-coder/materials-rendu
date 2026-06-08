@@ -5,7 +5,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 
-「打通系列」第三本（前两本：《打通科学计算任督二脉》《说与写·完整讲义》）。
+「打通系列」第四弹（前三本：《打通物理任督二脉》《打通工科数学任督二脉》《打通科学计算任督二脉》）。
 
 ---
 
